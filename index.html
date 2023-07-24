@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ahana gym fitness</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    body{
+        color:white;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/bg.webp')
+    }
+    .left{
+        border:20px red;
+        position: absolute;
+        left:22px;
+        top:0px;
+        display: inline-block;
+        margin:18px;
+    }
+    .left img{
+        width:111px;
+        filter: (100%)
+    }
+    .left div{
+        line-height:19px;
+        font-size:20px;
+        text-align: center;
+    }
+    .mid{
+        display:block;
+        width: 33%;
+        margin:12px auto;
+    }
+    .right{
+        position: absolute;
+        right:22px;
+        top:0px;
+        display:inline-block;
+        margin:18px;
+    }
+    .navbar{
+        display:inline-block;
+    }
+    .navbar li{
+        display:inline-block;
+        font-size:15px;
+    }
+    .navbar li a{
+        color:white;
+        text-decoration: none;
+        padding:10px 15px;
+    }
+    .navbar li a:hover, .navbar li a.active{
+        text-decoration:underline;
+        color:grey;
+    }
+    .btn{
+        margin:0px 9px;
+        background:black;
+        color:white;
+        padding:4px 14px;
+        border:2px solid grey;
+        border-radius:10px;
+        font-size:14px;
+        cursor:pointer;
+    }
+    .btn:hover{
+        color:rgb(221, 194, 194);
+    }
+    .container{
+        border: 2px solid red;
+    margin: 22px 54px;
+    padding: 32px;
+    width:33%;
+    border-radius:28px;
+    }
+    .form-group input{
+        text-align: center;
+    display: block;
+    width: 218px;
+    padding: -2px;
+    border: 1px solid black;
+    margin: 3px auto;
+    font-size: 13px;
+    border-radius: 8px;
+    }
+    .container h3{
+        text-align:center;
+    }
+    .container button{
+        display:block;
+        width:120px;
+        margin:auto;
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/png.png" alt="">
+            <div>chahal fitness</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#"class="active">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">fitness center</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">call us</button>
+            <button class="btn">Email</button>
+        </div>
+        </header><br><br><br>
+    <div class="container">
+        <h3>join the best gym of kolkata</h3>
+    <form action="noaction.php">
+        <div class="form-group">
+            <input type=""name=""placeholder="enter your name">
+        </div>
+        <div class="form-group">
+            <input type=""name=""placeholder="enter your email">
+        </div>
+        <div class="form-group">
+            <input type=""name=""placeholder="contact number">
+        </div>
+        <div class="form-group">
+            <input type=""name=""placeholder="enter your adress">
+        </div>
+        <div class="form-group">
+            <input type=""name=""placeholder="district">
+        </div>
+        <button class="btn">submit</button>
+    </form>
+    </div>
+</body>
+</html>
