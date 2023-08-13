@@ -3,139 +3,999 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ahana gym fitness</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Unique PG Hostel</title>
+    <style>
+    /* Basic styling for the navigation menu */
     body{
-        color:white;
-        margin: 0px;
-        padding: 0px;
-        background: url('img/bg.webp')
+        background-color: rgb(43, 233, 240);
     }
-    .left{
-        border:20px red;
-        position: absolute;
-        left:22px;
-        top:0px;
-        display: inline-block;
-        margin:18px;
-    }
-    .left img{
-        width:111px;
-        filter: (100%)
-    }
-    .left div{
-        line-height:19px;
-        font-size:20px;
-        text-align: center;
-    }
-    .mid{
-        display:block;
-        width: 33%;
-        margin:12px auto;
-    }
-    .right{
-        position: absolute;
-        right:22px;
-        top:0px;
-        display:inline-block;
-        margin:18px;
-    }
-    .navbar{
-        display:inline-block;
-    }
-    .navbar li{
-        display:inline-block;
-        font-size:15px;
-    }
-    .navbar li a{
-        color:white;
-        text-decoration: none;
-        padding:10px 15px;
-    }
-    .navbar li a:hover, .navbar li a.active{
-        text-decoration:underline;
-        color:grey;
-    }
-    .btn{
-        margin:0px 9px;
-        background:black;
-        color:white;
-        padding:4px 14px;
-        border:2px solid grey;
-        border-radius:10px;
-        font-size:14px;
-        cursor:pointer;
-    }
-    .btn:hover{
-        color:rgb(221, 194, 194);
-    }
-    .container{
-        border: 2px solid red;
-    margin: 22px 54px;
-    padding: 32px;
-    width:33%;
-    border-radius:28px;
-    }
-    .form-group input{
-        text-align: center;
+.navigation {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #ff8800;
+}
+/* Styling for the hero section */
+.hero {
+    background-image: url('hero-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 150px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff8800;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff6600;
+}
+/* Styling for room options */
+.room-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+.room {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.room img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.room h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.room p {
+    font-size: 16px;
+    color: #666;
+}
+
+.book-now-button {
+    display: inline-block;
+    background-color: #ff8800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.book-now-button:hover {
+    background-color: #ff6600;
+}
+/* Styling for the virtual tour section */
+.virtual-tour {
+    text-align: center;
+    padding: 40px;
+}
+
+.virtual-tour h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    max-width: 100%;
+}
+
+.video-container video {
+    position: absolute;
+    top:20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Styling for testimonials section */
+.testimonials {
+    text-align: center;
+    padding: 40px;
+}
+
+.testimonials h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    margin: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    font-weight: bold;
+    color: #666;
+}
+/* Styling for special offers section */
+.special-offers {
+    text-align: center;
+    padding: 40px;
+}
+
+.special-offers h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.offer {
+    margin: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.offer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.offer-button {
+    display: inline-block;
+    background-color: #ff8800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.offer-button:hover {
+    background-color: #ff6600;
+}
+/* Styling for social media section */
+.social-media {
+    text-align: center;
+    padding: 40px;
+}
+
+.social-media h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.1);
+}
+/* Styling for blog section */
+.blog {
+    text-align: center;
+    padding: 40px;
+}
+
+.blog h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    margin: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.blog-post h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.read-more-link {
+    display: inline-block;
+    background-color: #ff8800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.read-more-link:hover {
+    background-color: #ff6600;
+}
+/* Styling for contact section */
+.contact {
+    text-align: center;
+    padding: 40px;
+}
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#contact-form label {
     display: block;
-    width: 218px;
-    padding: -2px;
-    border: 1px solid black;
-    margin: 3px auto;
-    font-size: 13px;
-    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    display: inline-block;
+    background-color: #ff8800;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ff6600;
+}
+.logo >img{
+    width: 85px;
+    height: 86px;
+}
+/* Styling for the introductory section */
+.intro {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.ab
+{
+    text-align: center;
+}
+/* Styling for the virtual tour section */
+.virtual-tour {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.virtual-tour h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.virtual-tour p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.testimonials h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.testimonials p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+/* Styling for the special offers section */
+.special-offers {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.special-offers h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.special-offers p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Styling for the blog section */
+.blog {
+    text-align: center;
+    padding: 80px 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.blog h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.blog p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.blog-post {
+    margin: 0 auto 40px;
+    max-width: 300px;
+}
+
+.blog-post img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.blog-post h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #ff8800;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #ff6600;
+}
+.contact p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+/* Base styles for desktop screens */
+/* Base styles for desktop screens */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #ff8800;
+    color: white;
+    padding: 20px;
+}
+
+/* Main content styles */
+.main-content {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media query for tablets (portrait and landscape) */
+@media screen and (max-width: 768px) {
+    /* Tablet styles */
+    body {
+        font-size: 14px;
     }
-    .container h3{
-        text-align:center;
+    .main-content {
+        padding: 30px;
     }
-    .container button{
-        display:block;
-        width:120px;
-        margin:auto;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    /* Mobile styles */
+    body {
+        font-size: 12px;
     }
+    .main-content {
+        padding: 20px;
+    }
+}
+
+/* ... your desktop styles here ... */
+
+
+/* Media query for tablets (portrait and landscape) */
+/* Media query for tablets (portrait and landscape) */
+@media screen and (max-width: 768px) {
+    /* Tablet styles */
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .main-content {
+        padding: 30px;
+    }
+    
+    /* Additional tablet-specific styles */
+    /* ... */
+}
+@media screen and (max-width: 768px) {
+    /* Tablet styles */
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .main-content {
+        padding: 30px;
+    }
+    
+    /* Additional tablet-specific styles */
+    .intro h2,
+    .room-options h2,
+    .virtual-tour h2,
+    .testimonials h2,
+    .special-offers h2,
+    .contact h2 {
+        font-size: 24px;
+    }
+    
+    .room-options .room-option {
+        width: 100%;
+    }
+    
+    /* Adjust other styles for tablet layout... */
+}
+    /* ... your tablet styles here ... */
+
+/* Media query for mobile devices */
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) 
+{
+    body {
+        font-size: 12px;
+    }
+    .container {
+        padding: 5px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    
+    /* Additional mobile-specific styles */
+    header {
+        padding: 10px;
+    }
+    
+    .intro h2,
+    .room-options h2,
+    .virtual-tour h2,
+    .testimonials h2,
+    .special-offers h2,
+    .contact h2 {
+        font-size: 20px;
+    }
+    
+    .room-options .room-option {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /* Adjust other styles for mobile layout... */
+}
+@media screen and (max-width: 480px) {
+    /* Mobile styles */
+    /* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+    /* Mobile styles */
+    body {
+        font-size: 12px;
+    }
+    .container {
+        padding: 5px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    
+    /* Additional mobile-specific styles */
+    header {
+        padding: 10px;
+    }
+    
+    .intro h2,
+    .room-options h2,
+    .virtual-tour h2,
+    .testimonials h2,
+    .special-offers h2,
+    .contact h2 {
+        font-size: 20px;
+    }
+    
+    .room-options .room-option {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
+    
+    /* Adjust other styles for mobile layout... */
+}
+    /* ... your mobile styles here ... */
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Button styles */
+#openGallery {
+    background-color: #ff8800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 </style>
+</head>
 <body>
-    <header class="header">
-        <div class="left">
-            <img src="img/png.png" alt="">
-            <div>chahal fitness</div>
+    <header>
+        <header>
+    <nav class="navigation">
+        <div class="logo">
+            <img src="img/bg5.jpeg" alt="">
+        <div>Unique PG</div>
         </div>
-        <div class="mid">
-            <ul class="navbar">
-                <li><a href="#"class="active">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">fitness center</a></li>
-                <li><a href="#">contact us</a></li>
-            </ul>
-        </div>
-        <div class="right">
-            <button class="btn">call us</button>
-            <button class="btn">Email</button>
-        </div>
-        </header><br><br><br>
-    <div class="container">
-        <h3>join the best gym of kolkata</h3>
-    <form action="noaction.php">
-        <div class="form-group">
-            <input type=""name=""placeholder="enter your name">
-        </div>
-        <div class="form-group">
-            <input type=""name=""placeholder="enter your email">
-        </div>
-        <div class="form-group">
-            <input type=""name=""placeholder="contact number">
-        </div>
-        <div class="form-group">
-            <input type=""name=""placeholder="enter your adress">
-        </div>
-        <div class="form-group">
-            <input type=""name=""placeholder="district">
-        </div>
-        <button class="btn">submit</button>
-    </form>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Facilities</a></li>
+            <li><a href="#">Virtual Tour</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Special Offers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+    </header>
+
+    <section class="hero">
+        <section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Unique PG Hostel</h1>
+        <p>Your Comfortable Home Away From Home</p>
+        <a href="#" class="cta-button">Book Now</a>
     </div>
+    <div>
+        <section class="intro">
+            <h1>Welcome to Unique PG - Your Ideal Hostel for Engineering Students!</h1>
+            <p>Discover a comfortable and vibrant living space tailored to the needs of engineering students. At Unique PG, we provide a unique blend of modern amenities, a supportive community, and an inspiring environment to help you excel in your studies. Explore our range of well-designed rooms, cutting-edge facilities, and exciting events that make us the preferred choice for engineering students.</p>
+        </section>
+    </div>
+</section>
+
+        <!-- Hero section with CTA -->
+    </section>
+    <div class="ab">
+    <h2>Choose Your Perfect Space for Study and Relaxation</h2>
+    </div>
+    <p>Explore our variety of room options, each designed with your comfort in mind. Whether you prefer a cozy single room or a spacious double room for sharing, we have the ideal accommodation to suit your needs. Our rooms are equipped with modern furnishings, comfortable beds, ample workspace, and high-speed internet access, creating a conducive environment for both study and relaxation.</p>
+    <section class="room-options">
+        <section class="room-options">
+    <div class="room">
+        <img src="img/bg4.jpeg" alt="Room 1">
+        <h2>Single Room</h2>
+        <p>A cozy single room with a comfortable bed and workspace.</p>
+        <a href="#" class="book-now-button">Book Now</a>
+    </div>
+    
+    <div class="room">
+        <img src="room2.jpg" alt="Room 2">
+        <h2>Double Room</h2>
+        <p>Spacious double room ideal for sharing with a friend or partner.</p>
+        <a href="#" class="book-now-button">Book Now</a>
+    </div>
+    
+    <!-- Add more room options as needed -->
+</section>
+
+        
+        <!-- Room options with descriptions and "Book Now" buttons -->
+    </section>
+    <!-- Gallery button -->
+<button id="openGallery">Open Gallery</button>
+
+<!-- Hidden gallery section -->
+<div id="galleryModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <!-- Gallery images will be added here -->
+    </div>
+</div>
+<div class="modal-content">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <img src="image3.jpg" alt="Image 3">
+    <!-- Add more images as needed -->
+</div>
+
+    <section class="virtual-tour">
+        <section class="virtual-tour">
+    <h2>Take a Virtual Tour</h2>
+    <div class="video-container">
+        <video src="video.mp4"controls width="100%"height="100%">see the video for better information</video>
+    </div>
+    <section class="virtual-tour">
+        <h2>Experience Unique PG Virtually Before Your Arrival</h2>
+        <p>Can't wait to see our hostel in person? Take a virtual tour and get a sneak peek into our inviting spaces, stylish common areas, and well-equipped facilities. Immerse yourself in the ambiance of our living spaces, explore the study corners, and get a feel for the vibrant community that awaits you at Unique PG.</p>
+    </section>
+</section>
+
+        <!-- Virtual tour or video -->
+    </section>
+
+    <section class="testimonials">
+        <h2>Hear What Our Guests Have to Say</h2>
+    <p>Don't just take our word for it – hear from students who have experienced life at Unique PG. Our satisfied guests share their positive experiences, from the cozy rooms and friendly staff to the convenience of the location. Join the ranks of happy residents who have made Unique PG their home away from home.</p>
+        
+        <section class="testimonials">
+    <h2>What Our Guests Say</h2>
+    <div class="testimonial">
+        <img src="user1.jpg" alt="User 1">
+        <p>"Amazing place to stay! The rooms are comfortable, and the facilities are top-notch. The staff is friendly and always ready to help."</p>
+        <p class="user-info">John Doe</p>
+    </div>
+    
+    <div class="testimonial">
+        <img src="user2.jpg" alt="User 2">
+        <p>"I had a wonderful experience at Unique PG. The ambiance is great, and the location is perfect for students. Highly recommended!"</p>
+        <p class="user-info">Jane Smith</p>
+    </div>
+    
+    <!-- Add more testimonials as needed -->
+</section>
+
+        <!-- Testimonials and reviews -->
+    </section>
+
+    <section class="special-offers">
+        <section class="special-offers">
+            <h2>Unlock Exclusive Deals for Engineering Students</h2>
+            <p>We understand the financial commitments of students, which is why we offer special discounts and deals to make your stay even more affordable. Whether it's our Early Bird Discount for early bookings or our Group Booking Deal for those planning with friends, we're committed to providing value that aligns with your needs.</p>
+        </section>
+        
+        <section class="special-offers">
+    <h2>Special Offers</h2>
+    <div class="offer">
+        <img src="offer1.jpg" alt="Special Offer 1">
+        <h3>Early Bird Discount</h3>
+        <p>Book your room in advance and get 15% off your stay!</p>
+        <a href="#" class="offer-button">Learn More</a>
+    </div>
+    
+    <div class="offer">
+        <img src="offer2.jpg" alt="Special Offer 2">
+        <h3>Group Booking Deal</h3>
+        <p>Planning a group trip? Enjoy a 20% discount when you book multiple rooms.</p>
+        <a href="#" class="offer-button">Learn More</a>
+    </div>
+    
+    <!-- Add more offers as needed -->
+</section>
+
+        <!-- Special offers and discounts -->
+    </section>
+
+    <section class="booking-system">
+        <section class="booking-system">
+    <h2>Book Your Room</h2>
+    <form id="booking-form">
+        <label for="check-in">Check-In Date:</label>
+        <input type="date" id="check-in" name="check-in" required>
+        
+        <label for="check-out">Check-Out Date:</label>
+        <input type="date" id="check-out" name="check-out" required>
+        
+        <label for="room-type">Room Type:</label>
+        <select id="room-type" name="room-type">
+            <option value="single">Single Room</option>
+            <option value="double">Double Room</option>
+            <option value="third">third Room</option>
+            <option value="fourth">fourth Room</option>
+            <option value="fifth">fifth Room</option>
+            <option value="sixth">sixth Room</option>
+            <!-- Add more room options as needed -->
+        </select>
+        
+        <button type="submit" class="book-now-button">Book Now</button>
+    </form>
+</section>
+
+        <!-- Interactive booking system -->
+    </section>
+
+    <section class="social-media">
+        
+        <section class="social-media">
+    <h2>Connect With Us</h2>
+    <div class="social-icons">
+        <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+</section>
+
+        <!-- Social media feeds or icons -->
+    </section>
+
+    <section class="blog">
+        <section class="blog">
+            <h2>Guidance and Insights for Engineering Students</h2>
+            <p>Our blog is your resource hub for all things engineering and student life. Discover insightful articles on effective study techniques, career advice, time management, and much more. Stay informed about local events, activities, and opportunities to make the most of your time in the engineering world.</p>
+            <div class="blog-post">
+                <img src="study-techniques.jpg" alt="Study Techniques">
+                <h3>Mastering Study Techniques for Engineering Success</h3>
+                <p>Learn how to optimize your study sessions and ace your engineering exams with these proven techniques.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="career-advice.jpg" alt="Career Advice">
+                <h3>Navigating Your Engineering Career: Tips and Insights</h3>
+                <p>Explore career pathways, networking strategies, and professional development tips for engineering graduates.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </section>
+        <section class="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-post">
+        <img src="post1-image.jpg" alt="Blog Post 1">
+        <h3>Top Study Tips for Engineering Students</h3>
+        <p>Get the most out of your study sessions with these effective tips.</p>
+        <a href="#" class="read-more-link">Read More</a>
+    </div>
+    
+    <div class="blog-post">
+        <img src="post2-image.jpg" alt="Blog Post 2">
+        <h3>Career Opportunities for Engineering Graduates</h3>
+        <p>Explore various career paths and opportunities in the engineering field.</p>
+        <a href="#" class="read-more-link">Read More</a>
+    </div>
+    
+    <!-- Add more blog posts as needed -->
+</section>
+
+        <!-- Engaging blog posts or articles -->
+    </section>
+
+    <footer>
+        
+        <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or ready to book your stay? Reach out to us via the contact information provided. If you prefer, use our convenient contact form to send us a message directly. We're here to assist you and ensure your transition to Unique PG is seamless.</p>
+    <div class="contact-info">
+        <p><strong>Address:</strong> 700137,budge budge,nishchintapur</p>
+        <p><strong>Phone:</strong> 123456789</p>
+        <p><strong>Email:</strong>uniquemess123@gmail.com</p>
+    </div>
+    
+    <div class="contact-form">
+        <h3>Send us a message</h3>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</section>
+
+        <!-- Contact information and contact form -->
+    </footer>
 </body>
 </html>
