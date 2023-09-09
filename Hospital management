@@ -1,0 +1,120 @@
+import java.util.*;
+
+class Patient {
+    String name;
+    int age;
+    String contactNumber;
+
+    public Patient(String name, int age, String contactNumber) {
+        this.name = name;
+        this.age = age;
+        this.contactNumber = contactNumber;
+    }
+}
+
+class Doctor {
+    String name;
+    String specialization;
+    List<Patient> patients;
+
+    public Doctor(String name, String specialization) {
+        this.name = name;
+        this.specialization = specialization;
+        this.patients = new ArrayList<>();
+    }
+
+    public void addPatient(Patient patient) {
+        patients.add(patient);
+    }
+}
+
+class Hospital {
+    List<Doctor> doctors;
+
+    public Hospital() {
+        this.doctors = new ArrayList<>();
+    }
+
+    public void addDoctor(Doctor doctor) {
+        doctors.add(doctor);
+    }
+}
+
+public class pq {
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        Hospital hospital = new Hospital();
+
+        // Add doctors to the hospital
+        Doctor doctor1 = new Doctor("Dr. Smith", "Cardiologist");
+        Doctor doctor2 = new Doctor("Dr. Johnson", "Orthopedic");
+        hospital.addDoctor(doctor1);
+        hospital.addDoctor(doctor2);
+
+        while (true) {
+            System.out.println("1. Book an appointment");
+            System.out.println("2. View patient information");
+            System.out.println("3. Exit");
+            int choice = scanner.nextInt();
+            scanner.nextLine();  // Consume the newline character
+
+            switch (choice) {
+                case 1:
+                    bookAppointment(hospital);
+                    break;
+                case 2:
+                    viewPatientInformation(hospital);
+                    break;
+                case 3:
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
+    }
+
+    public static void bookAppointment(Hospital hospital) {
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+        System.out.println("Enter your age:");
+        int age = scanner.nextInt();
+        scanner.nextLine();  // Consume the newline character
+        System.out.println("Enter your contact number:");
+        String contactNumber = scanner.nextLine();
+
+        System.out.println("Available Doctors:");
+        for (int i = 0; i < hospital.doctors.size(); i++) {
+            System.out.println(i + 1 + ". " + hospital.doctors.get(i).name);
+        }
+        System.out.println("Select a doctor (1-" + hospital.doctors.size() + "):");
+        int doctorChoice = scanner.nextInt();
+        scanner.nextLine();  // Consume the newline character
+
+        Doctor selectedDoctor = hospital.doctors.get(doctorChoice - 1);
+        Patient patient = new Patient(name, age, contactNumber);
+        selectedDoctor.addPatient(patient);
+
+        System.out.println("Appointment booked with " + selectedDoctor.name);
+    }
+
+    public static void viewPatientInformation(Hospital hospital) {
+        System.out.println("Enter your name:");
+        String name = scanner.nextLine();
+
+        for (Doctor doctor : hospital.doctors) {
+            for (Patient patient : doctor.patients) {
+                if (patient.name.equals(name)) {
+                    System.out.println("Doctor: " + doctor.name);
+                    System.out.println("Specialization: " + doctor.specialization);
+                    System.out.println("Patient Name: " + patient.name);
+                    System.out.println("Age: " + patient.age);
+                    System.out.println("Contact Number: " + patient.contactNumber);
+                    return;
+                }
+            }
+        }
+
+        System.out.println("Patient not found.");
+    }
+}
